@@ -6,3 +6,5 @@ pyproj==3.7.2
 psycopg2-binary==2.9.11
 python-dotenv==1.0.1
 matplotlib==3.10.8
+fastapi
+uvicorn
