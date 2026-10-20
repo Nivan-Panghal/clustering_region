@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- SAMPLE ONLY: a made-up boundary of roughly 1 km x 1 km, used so you can try the pipeline.
-     It is not a real village or district boundary. Replace it with your own region. -->
+<!-- SAMPLE ONLY: a made-up boundary of roughly 1 km x 1 km, used for trying the pipeline.
+     It is not a real village or district boundary. -->
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Sample Region</name>
