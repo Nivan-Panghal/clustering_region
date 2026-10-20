@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SAMPLE ONLY: a made-up boundary of roughly 1 km x 1 km, used so you can try the pipeline.
+     It is not a real village or district boundary. Replace it with your own region. -->
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Sample Region</name>
+    <Placemark>
+      <name>Sample Region boundary</name>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              76.6000,28.9000,0 76.6045,28.8996,0 76.6092,28.9003,0 76.6098,28.9048,0
+              76.6090,28.9090,0 76.6046,28.9097,0 76.6004,28.9091,0 76.5996,28.9046,0 76.6000,28.9000,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>
