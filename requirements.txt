@@ -1,10 +1,14 @@
+# clustering + data loading
 numpy==2.4.2
 geopandas==1.1.2
 shapely==2.1.2
 scikit-learn==1.8.0
 pyproj==3.7.2
+matplotlib==3.10.8
+
+# API
+fastapi==0.147.0
+uvicorn==0.54.0
+pydantic==2.14.1
 psycopg2-binary==2.9.11
 python-dotenv==1.2.2
-matplotlib==3.10.8
-fastapi
-uvicorn
