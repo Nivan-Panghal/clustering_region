@@ -32,7 +32,7 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# Only the origins you list can call the API from a browser. Credentials (cookies) are not used.
+# Only the origins listed in CORS_ORIGINS can call the API from a browser. Credentials (cookies) are not used.
 ALLOWED_ORIGINS = [
     o.strip()
     for o in os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:5173").split(",")
@@ -95,7 +95,7 @@ class LocationRequest(BaseModel):
 
 class ServiceRequest(BaseModel):
     # request_id acts as the owner's secret: only the client that created it knows it, and it is
-    # never returned by the API. Generate it with a UUID4 (36 characters) or similar.
+    # never returned by the API. Clients generate it randomly, e.g. a UUID4 (36 characters).
     request_id:   str = Field(min_length=16, max_length=64, pattern=r"^[A-Za-z0-9_-]+$")
     region_name:  str = NAME
     cluster_name: str = NAME
@@ -318,7 +318,7 @@ def _color(ratio: float, urgency: int) -> str:
 if __name__ == "__main__":
     uvicorn.run(
         "main:app",
-        host=os.getenv("API_HOST", "127.0.0.1"),       # set API_HOST=0.0.0.0 only when you mean to expose it
+        host=os.getenv("API_HOST", "127.0.0.1"),       # 127.0.0.1 unless API_HOST is set; 0.0.0.0 exposes every interface
         port=int(os.getenv("API_PORT", 8000)),
         reload=os.getenv("API_RELOAD", "false").lower() == "true",
     )
